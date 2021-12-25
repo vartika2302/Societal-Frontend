@@ -45,7 +45,7 @@ class Sidebar extends React.Component {
                 src="https://cdn-icons-png.flaticon.com/128/102/102279.png"
                 alt="Bookmarks icon"
               />
-              <span className="sidebarListItemText">Booksmarks</span>
+              <span className="sidebarListItemText">Bookmarks</span>
             </li>
             <li className="sidebarListItem">
               <img
