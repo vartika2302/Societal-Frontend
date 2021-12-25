@@ -11,8 +11,8 @@ class Topbar extends React.Component {
         <div className="topbarCenter">
           <div className="searchBar">
             <img
-              className="topbarIcon"
-              src="https://cdn-icons-png.flaticon.com/128/482/482631.png"
+              className="searchIcon"
+              src="https://cdn-icons.flaticon.com/png/128/2811/premium/2811790.png?token=exp=1640442045~hmac=3b038d2677a803599f11cc55bef3918e"
               alt="search-icon"
             />
             <input
@@ -30,7 +30,7 @@ class Topbar extends React.Component {
             <div className="topbarIconItem">
               <img
                 className="topbarIcon"
-                src="https://cdn-icons-png.flaticon.com/128/1077/1077114.png"
+                src="https://cdn-icons.flaticon.com/png/128/3106/premium/3106773.png?token=exp=1640442908~hmac=ebb50cd7bdb27f8f0a8e487f877b09ec"
                 alt="person icon"
               />
               <span className="topbarIconBadge">1</span>
@@ -52,11 +52,9 @@ class Topbar extends React.Component {
               <span className="topbarIconBadge">1</span>
             </div>
           </div>
-            <img
-              className="topbarProfileImg"
-              src="../../assets/profiles/profile-1.jpg"
-              alt="demo"
-            />
+          <div className="topbarProfileImg">
+            <img src="../../assets/profiles/profile-1.jpg" alt="demo" />
+          </div>
         </div>
       </div>
     );
