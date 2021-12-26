@@ -1,6 +1,7 @@
 import React from "react";
 import "./post.css";
 import { Users } from "../../dummyData";
+import { useState } from "react";
 
 export default function Post({ post }) {
   //console.log(post);
@@ -9,7 +10,13 @@ export default function Post({ post }) {
   // ));
 
   // console.log(user[0].username);
+  const [like, setLike] = useState(post.likes);
+  const [isLiked, setIsLiked] = useState(false);
 
+  const likeHandler = () => {
+    setLike(isLiked ? like - 1 : like + 1);
+    setIsLiked(!isLiked);
+  };
   return (
     <div className="postContainer">
       <div className="postWrapper">
@@ -17,10 +24,15 @@ export default function Post({ post }) {
           <div className="postTopLeft">
             <img
               className="postProfileImg"
-              src={Users.filter((user)=> user.id===post?.userId)[0].profilePicture}
+              src={
+                Users.filter((user) => user.id === post?.userId)[0]
+                  .profilePicture
+              }
               alt="profile img"
             />
-            <span className="postUsername">{Users.filter((user)=>user.id===post?.userId)[0].username}</span>
+            <span className="postUsername">
+              {Users.filter((user) => user.id === post?.userId)[0].username}
+            </span>
             <span className="postDate">{post.date}</span>
           </div>
           <div className="postTopRight">
@@ -38,16 +50,18 @@ export default function Post({ post }) {
         <div className="postBottom">
           <div className="postBottomLeft">
             <img
+              onClick={likeHandler}
               className="likeIcon"
               src="../../assets/like.png"
               alt="like icon"
             />
             <img
+              onClick={likeHandler}
               className="heartIcon"
               src="../../assets/heart.png "
               alt="heart icon"
             />
-            <span className="postLikeCounter">{post.likes} people like it</span>
+            <span className="postLikeCounter">{like} people like it</span>
           </div>
           <div className="postBottomRight">
             <span className="postCommentText">{post.comments} comments</span>
