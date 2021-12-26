@@ -17,27 +17,27 @@ export const Users = [
   {
     id: 4,
     profilePicture: "./assets/profiles/profile-4.jpg",
-    username: "Elvin",
+    username: "Elvin Thomas",
   },
   {
     id: 5,
     profilePicture: "./assets/profiles/profile-5.jpg",
-    username: "Kane",
+    username: "Kane Shrum",
   },
   {
     id: 6,
     profilePicture: "./assets/profiles/profile-6.jpg",
-    username: "Arne",
+    username: "Arne Bennett",
   },
   {
     id: 7,
     profilePicture: "./assets/profiles/profile-7.jpg",
-    username: "Norbert",
+    username: "Norbert Durden",
   },
   {
     id: 8,
     profilePicture: "./assets/profiles/profile-8.jpg",
-    username: "Samuel",
+    username: "Samuel Hawks",
   },
   {
     id: 9,

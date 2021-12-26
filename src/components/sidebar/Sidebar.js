@@ -1,5 +1,7 @@
 import React from "react";
 import "./sidebar.css";
+import {Users} from '../../dummyData';
+import CloseFriend from "../closeFriend/CloseFriend";
 
 class Sidebar extends React.Component {
   render() {
@@ -18,7 +20,7 @@ class Sidebar extends React.Component {
             <li className="sidebarListItem">
               <img
                 className="sidebarListIcon"
-                src="https://cdn-icons.flaticon.com/png/128/3416/premium/3416046.png?token=exp=1640452942~hmac=f4f8585e69c8aff9b6c6d5d834ebf907"
+                src="https://cdn-icons.flaticon.com/png/128/2769/premium/2769104.png?token=exp=1640517785~hmac=a132db5cdf2716cfd487499e5b1b7b8b"
                 alt="Chats icon"
               />
               <span className="sidebarListItemText">Chats</span>
@@ -26,7 +28,7 @@ class Sidebar extends React.Component {
             <li className="sidebarListItem">
               <img
                 className="sidebarListIcon"
-                src="https://cdn-icons-png.flaticon.com/128/860/860780.png"
+                src="https://cdn-icons.flaticon.com/png/128/527/premium/527995.png?token=exp=1640517812~hmac=cec4edcee428dfc5b87c289a7a7eeaa5"
                 alt="Videos icon"
               />
               <span className="sidebarListItemText">Videos</span>
@@ -34,7 +36,7 @@ class Sidebar extends React.Component {
             <li className="sidebarListItem">
               <img
                 className="sidebarListIcon"
-                src="https://cdn-icons-png.flaticon.com/128/33/33308.png"
+                src="https://cdn-icons-png.flaticon.com/128/681/681494.png"
                 alt="Groups icon"
               />
               <span className="sidebarListItemText">Groups</span>
@@ -50,7 +52,7 @@ class Sidebar extends React.Component {
             <li className="sidebarListItem">
               <img
                 className="sidebarListIcon"
-                src="https://cdn-icons.flaticon.com/png/128/471/premium/471664.png?token=exp=1640453069~hmac=487f8d1fdb9b43105f34961480d54ebe"
+                src="https://cdn-icons.flaticon.com/png/128/471/premium/471715.png?token=exp=1640517890~hmac=80a799f9dd988e46e1d770d81033c134"
                 alt="Questions icon"
               />
               <span className="sidebarListItemText">Questions</span>
@@ -74,72 +76,18 @@ class Sidebar extends React.Component {
             <li className="sidebarListItem">
               <img
                 className="sidebarListIcon"
-                src="https://cdn-icons.flaticon.com/png/128/3044/premium/3044245.png?token=exp=1640453127~hmac=36121970d8159a0d452428233e7e77d4"
+                src="https://cdn-icons.flaticon.com/png/128/3044/premium/3044245.png?token=exp=1640517943~hmac=9dc58580d87f8ef474784ab0676a3fe3"
                 alt="Courses icon"
               />
               <span className="sidebarListItemText">Courses</span>
             </li>
           </ul>
-          <button className="sidebarButton">Show more</button>
-          <hr className="sidebarHr" />
+          <button className="sidebarButton">Show</button>
+          <hr className="sidebarHr"></hr>
           <ul className="sidebarFriendList">
-            <li className="sidebarFriend">
-              <img
-                className="sidebarFriendImg"
-                src=".././assets/profiles/profile-2.jpg"
-                alt="friend img"
-              />
-              <span className="sidebarFriendName">Jane Doe</span>
-            </li>
-            <li className="sidebarFriend">
-              <img
-                className="sidebarFriendImg"
-                src=".././assets/profiles/profile-2.jpg"
-                alt="friend img"
-              />
-              <span className="sidebarFriendName">Jane Doe</span>
-            </li>
-            <li className="sidebarFriend">
-              <img
-                className="sidebarFriendImg"
-                src=".././assets/profiles/profile-2.jpg"
-                alt="friend img"
-              />
-              <span className="sidebarFriendName">Jane Doe</span>
-            </li>
-            <li className="sidebarFriend">
-              <img
-                className="sidebarFriendImg"
-                src=".././assets/profiles/profile-2.jpg"
-                alt="friend img"
-              />
-              <span className="sidebarFriendName">Jane Doe</span>
-            </li>
-            <li className="sidebarFriend">
-              <img
-                className="sidebarFriendImg"
-                src=".././assets/profiles/profile-2.jpg"
-                alt="friend img"
-              />
-              <span className="sidebarFriendName">Jane Doe</span>
-            </li>
-            <li className="sidebarFriend">
-              <img
-                className="sidebarFriendImg"
-                src=".././assets/profiles/profile-2.jpg"
-                alt="friend img"
-              />
-              <span className="sidebarFriendName">Jane Doe</span>
-            </li>
-            <li className="sidebarFriend">
-              <img
-                className="sidebarFriendImg"
-                src=".././assets/profiles/profile-2.jpg"
-                alt="friend img"
-              />
-              <span className="sidebarFriendName">Jane Doe</span>
-            </li>
-            v
+          {Users.map(user=>(
+            <CloseFriend key={user.id} user={user}/>
+          ))}
           </ul>
         </div>
       </div>
