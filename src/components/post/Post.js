@@ -12,6 +12,7 @@ export default function Post({ post }) {
   // console.log(user[0].username);
   const [like, setLike] = useState(post.likes);
   const [isLiked, setIsLiked] = useState(false);
+  const PF = process.env.REACT_APP_PUBLIC_FOLDER;
 
   const likeHandler = () => {
     setLike(isLiked ? like - 1 : like + 1);
@@ -45,20 +46,20 @@ export default function Post({ post }) {
         </div>
         <div className="postCenter">
           <span className="postText">{post?.desc}</span>
-          <img className="postImg" src={post.photo} alt="post img" />
+          <img className="postImg" src={PF + post.photo} alt="post img" />
         </div>
         <div className="postBottom">
           <div className="postBottomLeft">
             <img
               onClick={likeHandler}
               className="likeIcon"
-              src="../../assets/like.png"
+              src={`${PF}like.png`}
               alt="like icon"
             />
             <img
               onClick={likeHandler}
               className="heartIcon"
-              src="../../assets/heart.png "
+              src={`${PF}heart.png`}
               alt="heart icon"
             />
             <span className="postLikeCounter">{like} people like it</span>

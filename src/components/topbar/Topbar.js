@@ -1,12 +1,15 @@
 import React from "react";
 import "./topbar.css";
+import { Link } from "react-router-dom";
 
 class Topbar extends React.Component {
   render() {
     return (
       <div className="topbarContainer">
         <div className="topbarLeft">
-          <span className="logo">Societal</span>
+          <Link to="/" style={{textDecoration: "none"}}>
+            <span className="logo">Societal</span>
+          </Link>
         </div>
         <div className="topbarCenter">
           <div className="searchBar">
