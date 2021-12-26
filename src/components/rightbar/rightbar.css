@@ -34,5 +34,39 @@
   list-style: none;
 }
 
+.profileRightbarTitle {
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+.profileRightBarInfo {
+  margin-bottom: 25px;
+}
+.profileRightbarInfoKey {
+  font-weight: 500;
+  margin-right: 8px;
+  color: #555;
+}
+.profileRightbarInfoValue {
+  font-weight: 300;
+}
+.profileRightbarFollowings {
+  display: flex;
+  flex-wrap: wrap;
+}
+.profileRightbarInfoItem {
+  margin-bottom: 10px;
+}
+.profileRightbarFollowingImg {
+  width: 100px;
+  height: 100px;
+  border-radius: 10%;
+  object-fit: cover;
+}
+.profileRightbarFollowing{
+  display: flex;
+  flex-direction: column;
+  margin: 0 5px;
+}
 
 
